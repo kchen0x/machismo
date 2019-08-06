@@ -13,6 +13,10 @@
 		845EAC6C22EE792F0052328E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845EAC6B22EE792F0052328E /* Assets.xcassets */; };
 		845EAC6F22EE792F0052328E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845EAC6D22EE792F0052328E /* LaunchScreen.storyboard */; };
 		845EAC7222EE792F0052328E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC7122EE792F0052328E /* main.m */; };
+		84949BC222EE8CDB0026BE98 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 84949BC122EE8CDB0026BE98 /* Card.m */; };
+		84949BC722EE8E870026BE98 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 84949BC622EE8E870026BE98 /* PlayingCard.m */; };
+		84949BCC22EEBC8E0026BE98 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 84949BCB22EEBC8E0026BE98 /* Deck.m */; };
+		84949BD222EEC4000026BE98 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 84949BD122EEC4000026BE98 /* PlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		845EAC6E22EE792F0052328E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845EAC7022EE792F0052328E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845EAC7122EE792F0052328E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84949BC022EE8CDB0026BE98 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		84949BC122EE8CDB0026BE98 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		84949BC522EE8E870026BE98 /* PlayingCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		84949BC622EE8E870026BE98 /* PlayingCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		84949BCA22EEBC8E0026BE98 /* Deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		84949BCB22EEBC8E0026BE98 /* Deck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		84949BD022EEC4000026BE98 /* PlayingCardDeck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		84949BD122EEC4000026BE98 /* PlayingCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +70,41 @@
 		845EAC6122EE792D0052328E /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				845EAC6222EE792D0052328E /* AppDelegate.h */,
-				845EAC6322EE792D0052328E /* AppDelegate.m */,
 				845EAC6522EE792D0052328E /* ViewController.h */,
 				845EAC6622EE792D0052328E /* ViewController.m */,
 				845EAC6822EE792D0052328E /* Main.storyboard */,
+				84949BC322EE8D5D0026BE98 /* Models */,
 				845EAC6B22EE792F0052328E /* Assets.xcassets */,
-				845EAC6D22EE792F0052328E /* LaunchScreen.storyboard */,
 				845EAC7022EE792F0052328E /* Info.plist */,
-				845EAC7122EE792F0052328E /* main.m */,
+				84949BC422EE8DE40026BE98 /* Supporting Files */,
 			);
 			path = Matchismo;
+			sourceTree = "<group>";
+		};
+		84949BC322EE8D5D0026BE98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84949BC022EE8CDB0026BE98 /* Card.h */,
+				84949BC122EE8CDB0026BE98 /* Card.m */,
+				84949BC522EE8E870026BE98 /* PlayingCard.h */,
+				84949BC622EE8E870026BE98 /* PlayingCard.m */,
+				84949BCA22EEBC8E0026BE98 /* Deck.h */,
+				84949BCB22EEBC8E0026BE98 /* Deck.m */,
+				84949BD022EEC4000026BE98 /* PlayingCardDeck.h */,
+				84949BD122EEC4000026BE98 /* PlayingCardDeck.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84949BC422EE8DE40026BE98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				845EAC6D22EE792F0052328E /* LaunchScreen.storyboard */,
+				845EAC7122EE792F0052328E /* main.m */,
+				845EAC6222EE792D0052328E /* AppDelegate.h */,
+				845EAC6322EE792D0052328E /* AppDelegate.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +180,10 @@
 				845EAC6722EE792D0052328E /* ViewController.m in Sources */,
 				845EAC7222EE792F0052328E /* main.m in Sources */,
 				845EAC6422EE792D0052328E /* AppDelegate.m in Sources */,
+				84949BC722EE8E870026BE98 /* PlayingCard.m in Sources */,
+				84949BD222EEC4000026BE98 /* PlayingCardDeck.m in Sources */,
+				84949BCC22EEBC8E0026BE98 /* Deck.m in Sources */,
+				84949BC222EE8CDB0026BE98 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PXH96M443K;
 				INFOPLIST_FILE = Matchismo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PXH96M443K;
 				INFOPLIST_FILE = Matchismo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
