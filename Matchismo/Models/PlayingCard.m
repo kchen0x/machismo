@@ -38,4 +38,38 @@
     }
 }
 
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    
+    if ([otherCards count] == 1) {
+        PlayingCard *otherCard = [otherCards firstObject];
+        if (otherCard.suit == self.suit) {
+            score = 1;
+        }
+        if (otherCard.rank == [self rank]) {
+            score = 4;
+        }
+    }
+    
+    if ([otherCards count] == 2) {
+        PlayingCard *card0 = [otherCards objectAtIndex:0];
+        PlayingCard *card1 = [otherCards objectAtIndex:1];
+        
+        if (card0.suit == card1.suit && card0.suit == self.suit) {
+            score = 1;
+        } else if (card0.suit == card1.suit || card0.suit == self.suit || card1.suit == self.suit){
+            score = 1;
+        }
+        if (card0.rank == card1.rank && card0.rank == self.rank) {
+            score = 20;
+        } else if (card0.rank == card1.rank || card0.rank == self.rank || card1.rank == self.rank){
+            score = 1;
+        }
+        
+    }
+    
+    return score;
+}
+
 @end
