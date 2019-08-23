@@ -10,7 +10,7 @@
 
 @interface CardMatchingGame()
 @property (nonatomic, readwrite) NSInteger score;
-@property (nonatomic, readwrite) NSString *status;
+@property (nonatomic, readwrite) NSString *status; // of this match result
 @property (nonatomic, strong) NSMutableArray *cards; // of Card
 @property (nonatomic, readwrite) NSInteger gameMode;
 @end
@@ -43,7 +43,7 @@ static const int COST_TO_CHOOSE = 1;
                 break;
             }
         }
-        _gameMode = DOUBLE_MODE;
+        _gameMode = DOUBLE_MODE; // by default
     }
     
     return self;
@@ -68,7 +68,7 @@ static const int COST_TO_CHOOSE = 1;
                 _status = card.contents;
                 if (otherCard.isChosen && !otherCard.isMatched) {
                     [otherCards addObject:otherCard];
-                    if ([otherCards count] == _gameMode + 1) {
+                    if ([otherCards count] == (_gameMode + 1)) {
                         int matchScore = [card match:otherCards];
                         if (matchScore) {
                             self.score += matchScore * MATCH_BONUS;
